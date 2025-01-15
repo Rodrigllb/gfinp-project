@@ -21,7 +21,8 @@ body {
   background-color: #1a1a1a;
 }
 #app { /*Estilização global*/
-  font-family: "Roboto Condensed", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #ffffff;
   margin: 12px;
 }

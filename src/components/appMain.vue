@@ -3,37 +3,36 @@
 
         <article>
 
-            <section class="informaçoes-dashboard">
-                    <h1>Dashboard</h1>
+            <section class="informaçoes-boasvindas-e-direcionamento">
+                <section>
+                    <h1>Bem vindo, Usuário!</h1>
+                    <h2>Como podemos te ajudar hoje?</h2>
+                    <small>Ao lado podemos te ajudar a começar com umas dicas iniciais!</small>
+                </section>
+                <section class="card-dashboard">
+                    <h3>Gerencie tudo!</h3>
+                    <p>Ao clicar no link abaixo você pode ser direcionando ao seu dashboard pessoal e gerir melhor o que você gastou no mês! O que acha de gerenciar melhor teus gastos e receitas mensais?</p>
+                    <a href="#">Ir para o dashboard.</a>
+                </section>
 
-                    <div class="fundos-do-usuario">
+                <section class="card-compras">
+                    <h3>Comprou hoje?</h3>
+                    <p>Aqui você pode ser direcionado para a página de compras. Lá você preenche corretamente as paradas compradas e todos esses dados preenchidos serão enviados para seu levantamento mensal. Corre lá!</p>
+                    <a href="#">Ir para as compras.</a>
+                </section>
 
-                        <img src="../assets/icon-cifrao.png" alt="cifrão icone">
-
-                        <div>
-                            <output id="saldo-em-conta">R$ 0.00</output>
-                            <small>Saldo em conta</small>
-                        </div>
-
-                    </div>
-
-                    <div class="despesas-do-usuario">
-                        <img src="../assets/icon-despesas.png" alt="cifrão negativo icone">
-
-                        <div>
-                            <output id="despesas-em-conta">R$ 0.00</output>
-                            <small>Despesas totais</small>
-                        </div>
-
-
-                    </div>
-
-                    <input type="button" value="Comprar" id="realizar-compras">
+                <section class="card-gerar-relatorio">
+                    <h3>Relatórios</h3>
+                    <p>Quer saber como você está indo no mês? Clique no link abaixo e veja como você está indo no mês. Lá você pode ver gráficos, tabelas e muito mais!</p>
+                    <a href="#">Ir para os relatórios.</a>
+                </section>
                     
             </section>
 
             <section class="dashboard-pagina-inicial">
-                
+                <section class="grafico-dashboard">
+
+                </section>
                 
             </section>
             
@@ -43,6 +42,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'appMain',
 
@@ -68,7 +68,7 @@
         font-size: 22pt;
     }
 
-    .informaçoes-dashboard {/*Estilização do container de informações do dashboard */
+    .informaçoes-boasvindas-e-direcionamento {/*Estilização geral das informações, boas vindas e guia inicial para o usuário*/
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
@@ -77,58 +77,41 @@
         height: auto;
         margin: 0 auto;
         padding: 0px 23px 0px 45px;	
-    
-    }
-
-    .fundos-do-usuario { /*Estilização do container de fundos do usuario */
-        display: grid;
-        grid-template-columns: 45px 50px;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .fundos-do-usuario div { /*Estilização dos elementos do container dos fundos do usuario.*/
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fundos-do-usuario small { /*Estilização do texto pequeno */
-        text-align: left;
-        font-size: 8pt;
-    }
-
-    .despesas-do-usuario { /*Estilização do container referente aos campos das despesas do usuario. */
-        display: grid;
-        grid-template-columns: 45px 50px;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .despesas-do-usuario div { /*Estilização dos elementos do container de despesas*/
-        display: flex;
-        flex-direction: column;
-    }
-
-    .despesas-do-usuario small { /*Estilização do texto pequeno */
-        text-align: left;
-        font-size: 8pt;
-    }   
-
-    #realizar-compras { /*Estilização do botão de compras.*/
-        width: auto;
-        height: 50px;
-        background-color: #2ebe2e;
-        color: #ffff;
+        
         border: none;
-        border-radius: 5px;
+        border-radius: 23px;
+    }
+
+    .informaçoes-boasvindas-e-direcionamento h1 { /*Estilização do titulo h1 do container de boas vindas e guia inicial.*/
+        font-weight: 900;
+        font-size: 34pt;
+        margin: 0;
+        color: #f0b90b;
+        margin: 0px;
+    }
+
+    .informaçoes-boasvindas-e-direcionamento a { /*Estilização geral dos links pertencentes a esse container. */
+        color: #f0b90b;
+    }
+
+    /*Abaixo inicia-se a estilização da barra de guias iniciais para o usuário, onde as informações apresentadas tem como intuito
+    de guiar, direcionar e sugerir para aonde o usuário possivelmente irá fazer na plataforma.*/
+
+    .card-dashboard, .card-compras, .card-gerar-relatorio {
+        height: 390px;
+        background-color: #9e9e9e17;
+        padding: 20px;
+        margin: 0px 20px 0px 20px ;
+    }
+
+    .card-gerenciar-compras p {
+        text-align: left;
     }
 
 
+
+
+   
     
     
 
