@@ -1,9 +1,13 @@
 <template>
     <main>
+        <section class="logo-empresa">  
+            <img src="../assets/logotipo/logo-gfinp_resized_small.png" alt="logotipo gfinp">
+        </section>
+        
         <div>
         <div class="cabeçalho-login">
             <h1>Login</h1>
-            <small>Preencha com suas credenciais.</small>
+            <small>Preencha com suas credenciais para prosseguir</small>
         </div>
         
         <form>
@@ -13,10 +17,12 @@
             <input type="password" id="password" name="password" required>
             <button type="submit">Iniciar Sessão</button>
         </form>
+
         <div class="links-rapidos">
             <small>Não tem conta? <a href="#" target="_blank" rel="noopener noreferrer">Criar sua conta aqui</a></small>
             <small>Se esqueceu a senha, clique <a href="#" target="_blank" rel="noopener noreferrer">aqui</a></small>
         </div>   
+
     </div>
     </main>
     
@@ -34,18 +40,29 @@ export default {
 
 <style scoped>
 
-    main {
-        display: flex;
+    main { /*Corpo principal dessa pagina de login. */
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
         justify-content: center;
         align-items: center;
-        height: 89vh;
+        height: 89vh;   
         background-color: #1a1a1a;
     }
+
+    .logo-empresa { /*Estilização da logo ao lado do formulário de login. */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+  
     div { /*Centralização dos itens internos da div para estilização da página de login.*/
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         width: 500px;
+        height: auto;
         background-color: #222222;
         border-radius: 25px;
         color: #b8b8b8;
@@ -58,6 +75,11 @@ export default {
 
     .cabeçalho-login small {
         color: #b8b8b8;
+    }
+
+    .cabeçalho-login img {
+        margin: 0 auto;
+        width: 200px;
     }
 
     h1 { /*Estilização do titulo da página de login. */
@@ -92,7 +114,7 @@ export default {
         text-align: center;
         margin: 12px 0;
     }
-    .links-rapidos a { /*Estilização dos links rapidos.*/
+    .links-rapidos a { /*Estilização dos links rapidos.*/   
         color: #e0b700;
         text-decoration: none;  
     }
