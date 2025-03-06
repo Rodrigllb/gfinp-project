@@ -1,14 +1,15 @@
 <template>
-  
+  <UserLogin></UserLogin>
 </template>
 
 <script>
-
+import UserLogin from './pages/userLogin.vue';
 
 export default {
   name: 'App',
   components: {
-      
+      UserLogin,
+
   }
 } 
 </script>
